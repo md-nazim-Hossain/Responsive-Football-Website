@@ -21,6 +21,10 @@ body{
     background-color: #2d25a0;
     color: white;
 }
+.header:hover .title{
+    color: orange;
+    transition: 1s ease-out;
+}
 .top-header{
     display: flex;
     justify-content: space-between;
