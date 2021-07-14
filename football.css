@@ -127,7 +127,7 @@ main{
     background-color: orange;
     color: white;
     perspective: 200px;
-    transform: translateX(-20%) rotateX(30deg);
+    transform: translateX(-10%) rotateX(30deg);
    
 }
 .country-details span{
