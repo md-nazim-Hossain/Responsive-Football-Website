@@ -24,9 +24,11 @@ main{
     top: 0%;
     background-color: #2d25a0;
     color: white;
+    transition: transform 2s ease-out;
 }
-.header:hover .title{
+.header:hover .title,.header:hover img{
     color: orange;
+    transform: skew(30deg);
     transition: 1s ease-out;
 }
 .top-header{
@@ -69,7 +71,7 @@ main{
 
  .all-players{
      margin-top: 70px;
-     margin-bottom: 165px;
+     margin-bottom: 100px;
  }
  .players{
      display: grid;
@@ -97,6 +99,49 @@ main{
 
 
  /* start of highlights section */
+
+ /* start of Top Winner Country section */
+ .top-country{
+     margin-bottom: 100px;
+ }
+ .top-country-title{
+     font-size: 40px;
+     margin-top: 0px;
+ }
+.countrys{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.country{
+    margin-left:5px;
+    background-color: white;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+    padding:10px;
+    transition: transform 1s ease-in-out;
+}
+.country:hover{
+    background-color: orange;
+    color: white;
+    perspective: 200px;
+    transform: translateX(-20%) rotateX(30deg);
+   
+}
+.country-details span{
+    font-size: 18px;
+    font-weight: 700;
+    color: black;
+}
+.country-details p{
+    font-size: 16px;
+    font-weight: 600;
+    color: gray;
+}
+
+ /* End of Top Winner Country section */
  .top-highlights{
     margin-bottom: 158px;
  }
@@ -143,6 +188,8 @@ main{
 }
 .fan{
     margin-left: 20px;
+    overflow: hidden;
+    position: relative
 }
 .fan:first-child{
     margin-left: 0px;
@@ -212,7 +259,6 @@ main{
         justify-content: center;
         align-items:center;
         padding: 20px;
-        padding-left: 0px;
     }
     .title{
         font-size: 50px;
@@ -246,6 +292,17 @@ main{
         font-size:22px;
     }
     /* end of players query */
+
+    /* Start of Top Winner Countr */
+    .countrys{
+        grid-template-columns: repeat(1,1fr);
+        grid-column-gap: 20px;
+    }
+    .top-country-title{
+        text-align: center;
+        font-size: 30px;
+    }
+    /* End Of Top Winner country */
 
     /* Start of Highlights query */
     .highlights{
@@ -331,6 +388,12 @@ main{
     .players{
         grid-template-columns: repeat(2,1fr);
     }
+    /* start of top Country Cup winner */
+    .countrys{
+        grid-template-columns: repeat(2,1fr);
+    }
+    /* End Of top country Cup Winner */
+
     /* Start Top Highlights */
     .highlight{
         width: 50%;
