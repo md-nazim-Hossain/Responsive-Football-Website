@@ -14,12 +14,12 @@ main{
     align-items: center;
 }
 .container{
-    width: 1000px;
+    width: 800px;
     margin:0px 280px;
 }
 /* header style of css */
 .header{
-    width: 1440px;
+    width:100%;
     left: 0%;
     top: 0%;
     background-color: #2d25a0;
@@ -31,11 +31,12 @@ main{
 }
 .top-header{
     display: flex;
-    justify-content: space-between;
+    justify-content:center;
     padding:86px 140px;
 }
 .header-banner{
     flex-basis: 485px;
+    padding-right: 20px;
 }
 .title{
     font-weight: bold;
@@ -79,7 +80,6 @@ main{
  }
  .player{
     flex-basis: 330px;
-    height: 474px;
     padding: 15px;
     background-color: white;
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
@@ -102,11 +102,11 @@ main{
  }
  .highlights{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
  }
  .highlight{
-    flex-basis: 469px;
-    height: 241px;
-    margin-right: 66px;
+     width:50%;
  }
  .highlight-title{
      font-size: 48px;
@@ -118,9 +118,9 @@ main{
     font-size: 16px;
     margin-bottom:24px;
  }
- .highlight-image img{
-    flex-basis: 567px;
-    height: 427px;
+ .highlight img{
+    flex-basis: 500px;
+    height: 400px;
  }
 /* end of highlights section */
 
@@ -130,7 +130,7 @@ main{
     margin-bottom: 100px;
     background-color: white;
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
-    padding: 20px;
+    padding: 10px;
 }
 .top-players-title{
     margin-bottom: 20px;
@@ -139,21 +139,28 @@ main{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 5px;
 }
 .fan{
-    margin-left: 30px;
+    margin-left: 20px;
+}
+.fan:first-child{
+    margin-left: 0px;
 }
 .player-img{
     text-align: center;
 }
 .fan img{
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
 }
+.followers-group,.followers{
+    text-align: center;
+}
 .follow{
-    width:60px;
-    height: 60px;
+    width:50px;
+    height: 50px;
     font-size: 30px;
     margin: 10px;
     margin-bottom: 0px;
@@ -162,6 +169,7 @@ main{
 .followers span{
     margin-left:10px;
     font-weight: 700;
+    font-size: 16px;
     color: gray;
 }
 /* End of Top Fan section */
@@ -194,62 +202,82 @@ main{
 
 /* Start of Media Query section */
 @media only screen and (max-width:688px){
-    .body{
-        overflow-x: hidden;
-    }
     .container{
         width: 100%;
+        margin: 0px;
     }
     /* Header Part */
     .top-header{
         flex-direction: column;
         justify-content: center;
-        align-items:flex-start;
-    }
-    .header-banner{
-        height: 100px;
+        align-items:center;
+        padding: 20px;
+        padding-left: 0px;
     }
     .title{
-        font-size: 20px;
+        font-size: 50px;
         text-align: center;
     }
     .button-group{
         text-align: center;
     }
+    .button{
+        width: 100px;
+        height: 30px;
+        font-size: 10px;
+        padding: 8px 15px;
+    }
     .banner-image img{
-        flex-basis: 300px;
-        height: 300px;
-        
+        width: 300px;
+        height: 250px;
+        box-sizing: border-box;
     }
      /* End of Header Part */
     .players{
-        grid-template-columns: repeat(1,1fr);
-        justify-content: center;
-        align-items: center;
+        grid-template-columns: repeat(1,1fr); 
+    }
+    .player .player-detail,.player-title{
+        padding:10px;
     }
     .player-title{
-        font-size: 40px;
+        font-size:40px;
     }
     .player-detail{
-        font-size: 20px;
+        font-size:22px;
     }
     /* end of players query */
 
     /* Start of Highlights query */
     .highlights{
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .highlight{
+        width: 100%;
     }
     .highlight-detail{
-        font-size: 20px;
+        width: 100%;
+        font-size: 16px;
+        text-align: center;
+        padding:0px 10px;
     }
     .highlight-title{
-        font-size: 30px;
+        font-size: 22px;
+        align-items: center;
+        text-align: center;
+        padding: 5px;
+    }
+    .highlight img{
+        width: 100%;
+        height: 50%;
+        margin-top: 30px;
     }
     /* End of Highlights query */
 
     /* Start of Top Fan query */
     .top-players-title{
-        font-size: 30px;
+        font-size: 28px;
     }
     .top-fan{
         flex-direction: column;
@@ -282,16 +310,74 @@ main{
 @media only screen and (min-width:689px) and (max-width:992px) {
     .container{
         width: 100%;
+        margin: 0px;
     }
+    /* Start Top Header */
+    .top-header{
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+        padding: 20px;
+        padding-left: 0px;
+    }
+    .title{
+        font-size: 50px;
+        text-align: center;
+    }
+    .button-group{
+        text-align: center;
+    }
+      /* End Top Header */
     .players{
         grid-template-columns: repeat(2,1fr);
     }
-    .highlights,.top-fan{
+    /* Start Top Highlights */
+    .highlight{
+        width: 50%;
+        padding: 0px 20px;
+    }
+    .highlight-title{
+        font-size: 30px;
+        width: 100%;
+    }
+    .highlight-detail{
+        font-size: 20px;
+        width: 100%;
+    }
+    .highlight img{
+        width: 100%;
+    }
+    /* End Top Header */
+
+     /* Start Top Fan */
+    .top-players-fan{
+        width: 100%;
+    }
+    .top-players-title{
+        padding-left: 10px;
+        font-size: 35px;
+    }
+    .top-fan{
         flex-direction: column;
     }
     .fan .followers{
         margin-bottom: 20px;
     }
+     /* End Top Fan */
 }
-
+@media only screen and (min-width:993px) and (max-width:1200px){
+    .container{
+        width: 100%;
+        margin: 0;
+    }
+    .header{
+        width:100%
+    }
+    .top-players-fan{
+        width: 100%;
+    }
+    .top-players-title{
+        padding-left: 20px;
+    }
+}
 /* End of Media Query section */
