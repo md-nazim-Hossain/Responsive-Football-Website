@@ -7,7 +7,11 @@ body{
     margin: 0%;
     font-family: 'Poppins', sans-serif;
     background-color: #f8f8f8;
-    overflow: auto;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .container{
     width: 1000px;
@@ -16,7 +20,8 @@ body{
 /* header style of css */
 .header{
     width: 1440px;
-    height: 677px;
+    left: 0%;
+    top: 0%;
     background-color: #2d25a0;
     color: white;
 }
@@ -30,14 +35,12 @@ body{
     padding:86px 140px;
 }
 .header-banner{
-    width: 485px;
-    height: 230px;
+    flex-basis: 485px;
 }
 .title{
     font-weight: bold;
     font-size: 64px;
     margin-bottom: 27px;
-    line-height: 80px;
 }
 .header-banner .button,.button{
     text-decoration: none;
@@ -62,10 +65,7 @@ body{
  /* end of header style */
 
  /* players style css */
- main{
-     display: flex;
-     flex-direction: column;
- }
+
  .all-players{
      margin-top: 70px;
      margin-bottom: 165px;
@@ -140,6 +140,9 @@ body{
     justify-content: space-between;
     align-items: center;
 }
+.fan{
+    margin-left: 30px;
+}
 .player-img{
     text-align: center;
 }
@@ -194,6 +197,11 @@ body{
     .container{
         width: 100%;
     }
+    .top-header{
+        flex-direction: column;
+        width: 700px;
+        justify-content: center;
+    }
     .players{
         grid-template-columns: repeat(1,1fr);
         justify-content: center;
@@ -212,7 +220,7 @@ body{
         flex-direction: column;
     }
     .highlight-detail{
-        font-size: 22px;
+        font-size: 24px;
     }
     .highlight-title{
         font-size: 30px;
@@ -251,7 +259,7 @@ body{
     }
 }
   /* tablet device */
-@media only screen and (min-width:688px) and (max-width:992px) {
+@media only screen and (min-width:689px) and (max-width:992px) {
     .container{
         width: 100%;
     }
