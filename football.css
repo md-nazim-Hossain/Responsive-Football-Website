@@ -6,13 +6,12 @@ body{
     padding: 0%;
     margin: 0%;
     font-family: 'Poppins', sans-serif;
-    box-sizing: border-box;
     background-color: #f8f8f8;
+    overflow: auto;
 }
 .container{
     width: 1000px;
-    margin-left: 180px;
-    margin-right: 280px;
+    margin:0px 280px;
 }
 /* header style of css */
 .header{
@@ -57,7 +56,7 @@ body{
     color: white;
 }
 .banner-image img{
-    width: 556.01px;
+    width: 556px;
     height: 438px;
 }
  /* end of header style */
@@ -105,7 +104,7 @@ body{
     display: flex;
  }
  .highlight{
-    width: 469px;
+    flex-basis: 469px;
     height: 241px;
     margin-right: 66px;
  }
@@ -120,7 +119,7 @@ body{
     margin-bottom:24px;
  }
  .highlight-image img{
-    width: 567px;
+    flex-basis: 567px;
     height: 427px;
  }
 /* end of highlights section */
@@ -139,6 +138,7 @@ body{
 .top-fan{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .player-img{
     text-align: center;
@@ -171,15 +171,14 @@ body{
     align-items: center;
 }
 .footer-logo img{
-    width: 483.87px;
+    flex-basis: 483px;
     height: 110px;
 }
 .icon-group{
     color: gray;
-    text-align: center;
 }
 .fab,.fas{
-    width: 32px;
+    flex-basis: 32px;
     height: 32px;
     color:gray;
     border-radius: 50%;
@@ -189,3 +188,82 @@ body{
     margin: 0px 14px;
 }
 /* End of footer section */
+
+/* Start of Media Query section */
+@media only screen and (max-width:688px){
+    .container{
+        width: 100%;
+    }
+    .players{
+        grid-template-columns: repeat(1,1fr);
+        justify-content: center;
+        align-items: center;
+    }
+    .player-title{
+        font-size: 50px;
+    }
+    .player-detail{
+        font-size: 24px;
+    }
+    /* end of players query */
+
+    /* Start of Highlights query */
+    .highlights{
+        flex-direction: column;
+    }
+    .highlight-detail{
+        font-size: 22px;
+    }
+    .highlight-title{
+        font-size: 30px;
+    }
+    /* End of Highlights query */
+
+    /* Start of Top Fan query */
+    .top-players-title{
+        font-size: 40px;
+    }
+    .top-fan{
+        flex-direction: column;
+    }
+    .fan .followers{
+        margin-bottom: 20px;
+    }
+    .player-title{
+        font-size: 28px;
+    }
+    .followers-group,.followers{
+        text-align: center;
+    }
+    .player-title{
+        margin: 0px;
+    }
+    /* End of Top fan query */
+    .footer-part{
+        flex-direction: column;
+    }
+    .footer-logo img{
+        flex-basis: 250px;
+        height: 70px;
+    }
+    .footer-copyright .margin{
+        font-size: 16px;
+    }
+}
+  /* tablet device */
+@media only screen and (min-width:688px) and (max-width:992px) {
+    .container{
+        width: 100%;
+    }
+    .players{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .highlights,.top-fan{
+        flex-direction: column;
+    }
+    .fan .followers{
+        margin-bottom: 20px;
+    }
+}
+
+/* End of Media Query section */
