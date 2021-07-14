@@ -28,7 +28,7 @@ main{
 }
 .header:hover .title,.header:hover img{
     color: orange;
-    transform: skew(30deg);
+    transform: skew(25deg);
     transition: 1s ease-out;
 }
 .top-header{
@@ -127,7 +127,7 @@ main{
     background-color: orange;
     color: white;
     perspective: 200px;
-    transform: translateY(-20%) rotateX(30deg);
+    transform: translateY(-15%) rotateX(30deg);
    
 }
 .country-details span{
