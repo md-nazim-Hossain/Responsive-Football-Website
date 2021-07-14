@@ -194,24 +194,44 @@ main{
 
 /* Start of Media Query section */
 @media only screen and (max-width:688px){
+    .body{
+        overflow-x: hidden;
+    }
     .container{
         width: 100%;
     }
+    /* Header Part */
     .top-header{
         flex-direction: column;
-        width: 700px;
         justify-content: center;
+        align-items:flex-start;
     }
+    .header-banner{
+        height: 100px;
+    }
+    .title{
+        font-size: 20px;
+        text-align: center;
+    }
+    .button-group{
+        text-align: center;
+    }
+    .banner-image img{
+        flex-basis: 300px;
+        height: 300px;
+        
+    }
+     /* End of Header Part */
     .players{
         grid-template-columns: repeat(1,1fr);
         justify-content: center;
         align-items: center;
     }
     .player-title{
-        font-size: 50px;
+        font-size: 40px;
     }
     .player-detail{
-        font-size: 24px;
+        font-size: 20px;
     }
     /* end of players query */
 
@@ -220,7 +240,7 @@ main{
         flex-direction: column;
     }
     .highlight-detail{
-        font-size: 24px;
+        font-size: 20px;
     }
     .highlight-title{
         font-size: 30px;
@@ -229,7 +249,7 @@ main{
 
     /* Start of Top Fan query */
     .top-players-title{
-        font-size: 40px;
+        font-size: 30px;
     }
     .top-fan{
         flex-direction: column;
@@ -238,7 +258,7 @@ main{
         margin-bottom: 20px;
     }
     .player-title{
-        font-size: 28px;
+        font-size: 26px;
     }
     .followers-group,.followers{
         text-align: center;
@@ -255,7 +275,7 @@ main{
         height: 70px;
     }
     .footer-copyright .margin{
-        font-size: 16px;
+        font-size: 14px;
     }
 }
   /* tablet device */
